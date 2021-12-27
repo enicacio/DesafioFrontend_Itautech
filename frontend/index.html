@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive Meta/Adaptação Mobile -->
+
+    <!-- SEO Geral  -->
+    <meta name="description" content="Cadastro para participar do programa de inclusão de mulheres na tecnologia, desenvolvido pelo Itaú para mulheres (cis ou transgêneros)">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> <!-- Fontes do Google -->
+
+    <!-- Script Java -->
+    <script src="./script.js"></script>
+    
+    <title>Itaú Girls Code - CADASTRE-SE AGORA</title>
+</head>
+
+<body>
+    <header>
+        <h2><b>Itaú Girls Code</b></h2>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Formulário -->
+            <form id="formulario" name="formulario">
+                <legend id="headerform">
+                    Cadastro no Programa de Formação Tech
+                    <br><small style="font-size: 14px; font-weight: normal;">Nos conte um pouco mais sobre você, para prosseguirmos com o cadastro</muted></small> 
+                </legend>
+
+                <fieldset>
+                <legend>
+                    <p style="font-size: 14px; font-weight: normal; text-align: start;">Identificação e dados para contato</p>
+                </legend>
+
+            <!-- Nome Completo -->
+                <div class="input-group">
+                    <label for="nome">Nome*:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome completo sem abreviações">
+                </div>
+
+                <div class="colunas2">
+                    <div class="input-group2">
+                        <label for="email">E-mail:</label><!-- Email -->
+                        <input type="email" id="email" placeholder="Seu melhor e-mail">
+                    </div>
+                    <div class="input-group3"><!-- Sexo - Item-list -->
+                        <label for="sexo">Sexo:</label>
+                        <select name="sexo" id="sexo">
+                            <option value="">Informar...</option>
+                            <option value="m">Masculino</option>
+                            <option value="f">Feminino</option>
+                            <option value="x">Não informar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Contatos -->
+                <div class="colunas">
+                    <div class="input-group"> <!-- Celular -->
+                        <label for="celular">Celular:*</label>
+                        <input type="text" id="celular" placeholder="DDD + número" />
+                    </div>
+                    <div class="input-group"> <!-- Telefone fixo -->
+                        <label for="telfixo">Telefone:</label>
+                        <input type="text" id="telfixo" placeholder="DDD + número" />
+                    </div>
+                </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>
+                    <p style="font-size: 14px; font-weight: normal; text-align: start;">Sobre a sua localização</p>
+                </legend>
+
+                <!-- Endereço -->
+                <div class="colunas">
+                    <div class="input-group"> <!-- CEP -->
+                        <label for="cep">CEP:*</label>
+                        <input type="text" maxlength="9" id="cep" />
+                    </div>
+                    <div class="input-group"> <!-- Consultar CEP -->
+                        <label for="consultacep">Consulte o CEP abaixo:</label>
+                        <button type="button" class="botao2" onclick="abreaba()">Pesquisar CEP</button>
+                    </div>
+                </div>
+                <div class="colunas2"> 
+                    <div class="input-group2"> <!-- Rua -->
+                        <label for="endereco">Endereço:*</label>
+                        <input type="text" id="logradouro" placeholder="Nome do logradouro (Rua, Avenida, Estrada ...)" />
+                    </div>
+                    <div class="input-group3"> <!-- Número -->
+                        <label for="num">Número:*</label>
+                        <input type="text" id="num" placeholder="Apenas números" />
+                    </div>
+                </div>
+                <div class="colunas">
+                    <div class="input-group"> <!-- Complemento -->
+                        <label for="comp">Complemento:</label>
+                        <input type="text" id="complemento" placeholder="Casa, apartamento, bloco, lote ..." />
+                    </div>
+                    <div class="input-group"> <!-- Bairro -->
+                        <label for="bairro">Bairro:*</label>
+                        <input type="text" id="bairro" placeholder="Informe o Bairro" />
+                    </div>
+                </div>
+                
+
+                <div class="colunas">
+                    <div class="input-group"> <!-- Estado -->
+                        <label for="estado">Estado:*</label>
+                        <select name="estado" id="uf">
+                            <option value="">Escolha...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="AP">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RR">Rondônia</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="input-group"> <!-- Cidade -->
+                        <label for="Cidade">Cidade:*</label>
+                        <input type="text" id="localidade" placeholder="Informe a Cidade">
+                    </div> 
+                </div>
+                <script src="./main.js"></script>
+
+                </fieldset>
+
+                <!-- Docs pessoais -->
+                <fieldset>
+                <legend>
+                    <p style="font-size: 14px; font-weight: normal; text-align: start;">Agora seus documentos pessoais</p>
+                </legend>
+
+                <div class="colunas">
+                    <div class="input-group"><!-- RG -->
+                        <label for="RG">RG:</label>
+                        <input type="text" id="rg" placeholder="Apenas números">
+                    </div>
+                    <div class="input-group">
+                        <label for="cpf">CPF:*</label><!-- CPF -->
+                        <input type="text" id="cpf" placeholder="Apenas números"/>
+                    </div>
+                </div>
+                </fieldset>
+
+                <!-- Envio e validação -->
+                <fieldset align="center">
+                <legend>
+                    <p style="font-size: 14px; font-weight: normal;">Pronto! Agora só revisar tudo e ENVIAR</p>
+                </legend>
+                <p style="font-weight: bold; color: white; margin-top: 0px; margin-bottom: 25px;">Os campos marcados (*) são obrigatórios</p>
+                <button type="button" class="botao" onclick="validacao()">ENVIAR</button><!-- Botão Validar e Enviar -->
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <p><small>| Desenvolvido durante o Programa Itau Tech PCD |</small>
+                <br><small><i>Parceria Gama Academy e Banco Itaú</i></small></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
